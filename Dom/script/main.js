@@ -92,4 +92,24 @@ function modifica() {
   document.getElementById("btnMostrar").addEventListener("click", function (event) {
     event.preventDefault(); // Evita que el formulario se envíe
     alert("¡Botón presionado!");
-  });
+  }); // load
+
+// Se ejecuta cuando termina de cargar todos los elementos de la pagina 
+  window.addEventListener("load", function(event) {
+        console.log("La página se ha cargado completamente.");
+        // Aquí puedes realizar otras acciones después de que la página se haya cargado
+      }
+  );
+
+  function txtToUpper(event){
+    event.preventDefault(); //no hagas lo que haces por defecto
+    event.target.value =event.target.value.trim().toUpperCase(); //convierte a mayusculas
+  }//txtToUpper
+//blur --> cuando se sale del campo 
+  txtRFC.addEventListener("blur", txtToUpper); //txtRFC
+  txtCurp.addEventListener("blur", txtToUpper); //txtCurp
+
+  txtTelefono.addEventListener("blur", function (event){
+      event.preventDefault(); //no hagas lo que haces por defecto
+      txtCurp.value = txtTelefono.value.trim().slice(0.10); //convierte a mayusculas
+  }); //txtTelefono
