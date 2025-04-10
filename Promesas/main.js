@@ -12,8 +12,14 @@ const data = {
 };
 
 function getData(){
-    setTimeout
-    return data;
+    return new Promise( (resolve, reject) => {
+        if(data==null){
+            reject(new Error("No hay datos"));
+        }//null        
+    setTimeout ( () => {resolve(data)}, 2000);//5 segundos
+    });
 }//getData
 
-
+getData
+        .then((response)=> console.log("Respuesta: ", response))//Responde la consola con el objeto data
+        .catch((err) => console.log("catch: ", err));//getData
