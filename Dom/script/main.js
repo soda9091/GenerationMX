@@ -73,10 +73,10 @@ btnMostrar.addEventListener("click", function(event){
 window.addEventListener("load", function(event){
     console.log("Se termino de cargar la pagina");
 });//load
- function txtToUpper(event){
+function txtToUpper(event){
     event.preventDefault();
     event.target.value = event.target.value.trim().toUpperCase();
- }
+}
 
 //Blur -> cuadno se sale del campo txtRFC
 
