@@ -20,4 +20,4 @@ Tareas por realizar:
  
 > Vista previa del index.html
 
- ![Image](./images/prueba.jpg)
+![Index](<https://raw.githubusercontent.com/Fernando-Bartolome/CH53_EjercicioDOM/refs/heads/main/image/Captura%20de%20pantalla%20(2508).png>)
